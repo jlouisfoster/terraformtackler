@@ -45,8 +45,18 @@ A: [12:40 PM] Vincent Prince
 ​[12:42 PM] Vincent Prince
     or something like that
 
+### Terraform Module Access
 
+Q: [1:18 PM] James Louis-Foster
+    and when you call module.naming.ressourceGroupName
+​[1:19 PM] James Louis-Foster
+    it will ping azure during deployment to get the right name or it uses a variable inside terraform that you've set?
 
+A: [1:25 PM] Vincent Prince
+    yes it the root main.tf file we specify a backen
+    
+​[1:26 PM] Vincent Prince
+    it translates the Terraform ressource name to an Azure ID
 
 
 
