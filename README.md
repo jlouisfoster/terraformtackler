@@ -19,3 +19,34 @@ There are lots of other things you can do too, but it's also important to know w
 Hope that helps. Feel free to ask other questions if you need more information and I'll try to get back to you.
 Source: https://www.reddit.com/r/Terraform/comments/jphmpl/eli5_terraform_variables/
 ```
+
+### Terraform Resources:
+
+e.g
+```
+resource "azurerm_resource_group" "cloudagent" {
+    name = module.namming.ressourceGroupName
+    location = local.location   
+    tags = var.resource_tags
+```
+
+Q: What does the cloudagent mean here? I understand that this uses the azure resource block in terraform to obtain the resource group but is "cloudagent" the name you are giving your newly created resource group or is just a placeholder name to be referenced later? because I see name = module.namm - which I assume pulls the actual name of the resource group that module is using..?
+
+A: [12:40 PM] Vincent Prince
+    It's the name of the terraform ressources itself
+​[12:40 PM] Vincent Prince
+    it need to be unique within the module
+​[12:41 PM] Vincent Prince
+    module to module communication, this need to be transfered in an  "output"
+​[12:41 PM] Vincent Prince
+    but the terraform name and the azure ressource name does not need to match (however it is strongly suggested that they avec a certain link)
+​[12:42 PM] Vincent Prince
+    ex: in the screenshot you sent met : azurerm_ressource_group.cloudagent will be namme CAE-ENG-LABS-STAGE-CloudAgent
+​[12:42 PM] Vincent Prince
+    or something like that
+
+
+
+
+
+
