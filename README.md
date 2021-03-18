@@ -1,5 +1,16 @@
 # Place to store all your tips & tricks for Terraform
 
+### Terraform Deploy Instructions:
+
+1. Make whatever change I want in a new branch - push that branch to the repo
+2. Run a build of the yaml file to ensure nothing is broken with the terraform code itself
+3. Once the build passes - create a pull request
+4. Once the pull request is approved - it's merged and this auto triggers with the service principal the deployment into azure(so my resource is actually created)
+5. Include the terraform plan outline in the PR description to help the reviewer from the build logs of the yaml pipeline build.
+
+Terraform Init Plan = The build the verifies your terraform code has no compilation errors or syntax errors. This is ran whenever a pull request is created.
+Terraform Init Plan Apply = This is what deploys the architecture to your resource (i.e Azure Scale Set etc.) This is only ran when the build is merged into master.
+
 ### Azure Devops Process:
 
 1. Test by running pipeline yaml for code errors directly in azure devops prior to creating pull request
