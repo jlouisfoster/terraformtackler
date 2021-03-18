@@ -1,5 +1,13 @@
 # Place to store all your tips & tricks for Terraform
 
+### Azure Devops Process:
+
+1. Test by running pipeline yaml for code errors directly in azure devops prior to creating pull request
+
+2. Create pull request once tests pass and once approved - and merged to master, it will auto deploy with service principal to azure where your scaleset will be created.
+
+
+
 ### Terraform Variables ELI5
 
 ```
